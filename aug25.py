@@ -8,7 +8,7 @@
 #    print(f"{name}: GPA {gpa}")
 #
 #print_student(student1_name, student1_gpa)
-#print_student(student2_name, student2_gpa)
+##print_student(student2_name, student2_gpa)
  
 class Student:
     def __init__(self, name, gpa):
