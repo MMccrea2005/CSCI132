@@ -41,14 +41,14 @@ def checkTags(htmlStr):
    tagList = htmlStr.split()
    for tag in tagList:
       if tag in ["<head>", "<title>", "<html>", "<body>", "<h1>", "<div>", "<p>"]:
-         tag.strip('<>/Example,')
+         tag.strip('<>/')
          s.push(tag)
       elif tag in ["</head>", "</title>", "</html>", "</body>", "</h1>", "</div>", "</p>"]:
          tag = tag.strip('<>/')
          if s.is_empty():
             return False
-      if s.peek() == tag:
-         s.pop()
+         if s.peek() == tag:
+            s.pop()
       else:
          return False
          
