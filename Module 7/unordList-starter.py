@@ -93,7 +93,17 @@ class UnorderedList:
             previous.next = item
 
     def insert(self, pos, item):
-        pass
+        current = self.head
+        count = 0
+        previous = None
+        while current is not None:
+            previous = current
+            current = current.next
+            count = count + 1
+            if count == pos:
+                previous.next = item
+                
+                
 
     def index(self, item):
         current = self.head
@@ -101,9 +111,9 @@ class UnorderedList:
         while current is not None:
             if item == current:
                 break
-        else:
-            count = count + 1
-            current = current.next
+            else:
+                count = count + 1
+                current = current.next
         
         print(count)
         return count
