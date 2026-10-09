@@ -107,11 +107,8 @@ class UnorderedList:
         
         print(count)
         return count
-            
         
-                
-                
-
+        
     def pop(self):
         current = self.head
         previous = None
